@@ -1,15 +1,15 @@
-# Atulya Automation Hub
+# Atulya-Automation-Hub
 
 > **Create and run everyday automations from one simple workspace.** ⚡🖥️
 
-![Atulya - One-click business automation](assets/atulya-hero.png)
+![Atulya-Automation-Hub banner](assets/atulya-hero.png)
 
 ![Status](https://img.shields.io/badge/status-planning%20%26%20architecture-f59e0b)
 ![License](https://img.shields.io/badge/license-MIT-14b8a6)
 ![Platforms](https://img.shields.io/badge/planned-Windows%20%7C%20macOS%20%7C%20Linux-2563eb)
 ![Local First](https://img.shields.io/badge/local--first-yes-10b981)
 
-Atulya Automation Hub is a planned standalone desktop application for building and running quick automations: move and rename files, watch folders, process spreadsheets, schedule repeatable tasks and connect approved web/API steps.
+Atulya-Automation-Hub is a planned standalone desktop application for building and running quick automations: move and rename files, watch folders, process spreadsheets, schedule repeatable tasks and connect approved web/API steps.
 
 > 🚧 **Project stage:** Product blueprint and roadmap. Installers and application code are not released yet.
 
@@ -69,15 +69,11 @@ flowchart TD
 
 ## 🛡️ Safety
 
-Atulya Automation Hub will not bypass authentication, OTPs, CAPTCHAs, access restrictions or application security controls. Sending, deletion and remote actions must remain visible and user-approved.
+Atulya-Automation-Hub will not bypass authentication, OTPs, CAPTCHAs, access restrictions or application security controls. Sending, deletion and remote actions must remain visible and user-approved.
 
 ## 🤝 Contributing
 
 Open an issue describing a repetitive task you want automated, including input files, expected result and the operating system you use.
-
-## 🔗 Independent Atulya Projects
-
-Each Atulya repository is a separate product and does not require this application: [ERP](https://github.com/atulyaai/Atulya-Accounting-ERP) · [GST](https://github.com/atulyaai/Atulya-GST-Suite) · [SAP](https://github.com/atulyaai/Atulya-SAP-Automations) · [Office](https://github.com/atulyaai/Atulya-Office) · [HR](https://github.com/atulyaai/Atulya-HR-Suite) · [DataClean](https://github.com/atulyaai/Atulya-Data-Scruber) · [Invoice](https://github.com/atulyaai/Atulya-Invoice) · [Convert](https://github.com/atulyaai/Atulya-All-File-Converter) · [Host](https://github.com/atulyaai/Atulya-Launch)
 
 ## 📜 License
 
