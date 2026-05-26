@@ -19,15 +19,15 @@ Ask for a result instead of fighting files and forms:
 
 | You want to... | Atulya module |
 |---|---|
-| Clean a messy SAP or bank export | [Atulya DataClean](https://github.com/atulyaai/Atulya-DataClean) |
+| Clean a messy SAP or bank export | [Atulya DataClean](https://github.com/atulyaai/Atulya-Data-Scruber) |
 | Create invoices, quotations and POs | [Atulya Invoice](https://github.com/atulyaai/Atulya-Invoice) |
-| Prepare GST reconciliation working files | [Atulya GST](https://github.com/atulyaai/Atulya-GST) |
+| Prepare GST reconciliation working files | [Atulya GST](https://github.com/atulyaai/Atulya-GST-Suite) |
 | Automate Excel, Word, Outlook or slides | [Atulya Office](https://github.com/atulyaai/Atulya-Office) |
-| Run approved SAP GUI workflows | [Atulya SAP](https://github.com/atulyaai/Atulya-SAP) |
-| Manage employees and payroll | [Atulya HR](https://github.com/atulyaai/Atulya-HR) |
-| Run accounts and inventory | [Atulya ERP](https://github.com/atulyaai/Atulya-ERP) |
-| Convert PDFs, scans and sheets offline | [Atulya Convert](https://github.com/atulyaai/Atulya-Convert) |
-| Host Atulya apps and dashboards | [Atulya Host](https://github.com/atulyaai/Atulya-Host) |
+| Run approved SAP GUI workflows | [Atulya SAP](https://github.com/atulyaai/Atulya-SAP-Automations) |
+| Manage employees and payroll | [Atulya HR](https://github.com/atulyaai/Atulya-HR-Suite) |
+| Run accounts and inventory | [Atulya ERP](https://github.com/atulyaai/Atulya-Accounting-ERP) |
+| Convert PDFs, scans and sheets offline | [Atulya Convert](https://github.com/atulyaai/Atulya-All-File-Converter) |
+| Host Atulya apps and dashboards | [Atulya Host](https://github.com/atulyaai/Atulya-Launch) |
 
 ## 🖱️ One-Click Experience
 
