@@ -1,89 +1,84 @@
-# Atulya One
+# Atulya Automation Hub
 
-> **Free business automation for India. One workspace. Your data. Your rules.** 🇮🇳
+> **Create and run everyday automations from one simple workspace.** ⚡🖥️
 
 ![Atulya - One-click business automation](assets/atulya-hero.png)
 
 ![Status](https://img.shields.io/badge/status-planning%20%26%20architecture-f59e0b)
 ![License](https://img.shields.io/badge/license-MIT-14b8a6)
-![Platforms](https://img.shields.io/badge/planned-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Web-2563eb)
+![Platforms](https://img.shields.io/badge/planned-Windows%20%7C%20macOS%20%7C%20Linux-2563eb)
 ![Local First](https://img.shields.io/badge/local--first-yes-10b981)
 
-Atulya One is the planned command center for free, local-first business automation: billing, accounts, GST preparation, Office automation, SAP workflows, payroll, file conversion, and app hosting.
+Atulya Automation Hub is a planned standalone desktop application for building and running quick automations: move and rename files, watch folders, process spreadsheets, schedule repeatable tasks and connect approved web/API steps.
 
-> 🚧 **Project stage:** Product blueprint and community roadmap. Installers and application code are not released yet.
+> 🚧 **Project stage:** Product blueprint and roadmap. Installers and application code are not released yet.
 
-## ✨ What Atulya Should Feel Like
+## ✨ What It Should Feel Like
 
-Ask for a result instead of fighting files and forms:
+Ask for an outcome, preview the steps, and run it:
 
-| You want to... | Atulya module |
+| You want to... | Automation outcome |
 |---|---|
-| Clean a messy SAP or bank export | [Atulya DataClean](https://github.com/atulyaai/Atulya-Data-Scruber) |
-| Create invoices, quotations and POs | [Atulya Invoice](https://github.com/atulyaai/Atulya-Invoice) |
-| Prepare GST reconciliation working files | [Atulya GST](https://github.com/atulyaai/Atulya-GST-Suite) |
-| Automate Excel, Word, Outlook or slides | [Atulya Office](https://github.com/atulyaai/Atulya-Office) |
-| Run approved SAP GUI workflows | [Atulya SAP](https://github.com/atulyaai/Atulya-SAP-Automations) |
-| Manage employees and payroll | [Atulya HR](https://github.com/atulyaai/Atulya-HR-Suite) |
-| Run accounts and inventory | [Atulya ERP](https://github.com/atulyaai/Atulya-Accounting-ERP) |
-| Convert PDFs, scans and sheets offline | [Atulya Convert](https://github.com/atulyaai/Atulya-All-File-Converter) |
-| Host Atulya apps and dashboards | [Atulya Host](https://github.com/atulyaai/Atulya-Launch) |
+| Rename and file downloaded invoices | A reusable watched-folder workflow |
+| Move attachments into vendor folders | A reviewed sorting recipe |
+| Run a spreadsheet cleanup every evening | A scheduled local job |
+| Fetch approved API data into CSV | A repeatable export workflow |
+| Chain file conversion and email draft creation | A visible multi-step automation |
 
 ## 🖱️ One-Click Experience
 
 | Platform | Planned delivery |
 |---|---|
-| Windows | Signed `.exe` installer, desktop shortcut and automatic local database |
+| Windows | Signed `.exe` installer, desktop shortcut and local workspace |
 | macOS | Signed `.dmg` application package |
-| Linux | AppImage and `.deb`, plus Docker Compose for servers |
-| Web/PWA | Installable browser app connected to a user-controlled Atulya server |
-| Android | Companion flows from Atulya Convert and approvals |
+| Linux | AppImage and `.deb`, plus CLI package |
 
-First launch should include a demo company, sample spreadsheets, guided setup, backup location selection, and optional module installation.
+First launch should include sample workflows, a visual recipe builder, a run history view, permission prompts and a backup/export option.
 
 ## 🧩 Architecture
 
 ```mermaid
 flowchart TD
-    UI["Desktop / Web / Mobile UI"] --> API["Atulya Local API"]
-    API --> CORE["Shared Business Core"]
-    CORE --> DB[("SQLite local / PostgreSQL team")]
-    CORE --> JOBS["Automation & Background Jobs"]
-    JOBS --> OFFICE["Office Adapter"]
-    JOBS --> SAP["SAP GUI Adapter"]
-    JOBS --> GST["Authorized GST File/API Workflows"]
-    JOBS --> FILES["PDF / Excel / Conversion Engine"]
-    CORE --> AI["Optional AI Assistant"]
-    AI --> SAFE["Approval, Redaction & Audit Log"]
+    UI["Desktop Workflow Builder"] --> API["Local Automation API"]
+    API --> ENGINE["Workflow Engine"]
+    ENGINE --> FILES["File & Folder Actions"]
+    ENGINE --> SHEETS["Spreadsheet Actions"]
+    ENGINE --> WEB["Approved HTTP/API Actions"]
+    ENGINE --> SCHED["Scheduler"]
+    ENGINE --> AUDIT["Preview + Run Log"]
+    API --> DB[("Local SQLite Workspace")]
 ```
 
-### Architecture Principles
+### Design Principles
 
-- 🔒 **Local-first:** business files remain on the user's computer unless they explicitly configure sync.
-- 🔌 **Modular:** each module works independently before being connected in Atulya One.
-- 📂 **Portable data:** Excel, CSV, JSON and PDF exports are first-class outputs.
-- ✅ **Human approval:** government filings, payments, emails and ERP postings require confirmation.
-- 🧾 **Auditable:** changes and automation actions should leave reviewable logs.
+- 🔒 **Local-first:** workflows and data stay local unless the user configures a network action.
+- 👀 **Preview first:** destructive, sending or external actions are shown before execution.
+- 🧩 **Recipe-based:** workflows can be saved, exported and shared without hidden steps.
+- 🖥️ **Cross-platform:** platform-specific actions are clearly marked.
+- 🧾 **Auditable:** every run records what changed and what failed.
 
 ## 🗺️ Roadmap
 
 | Phase | Focus | Outcome |
 |---|---|---|
-| 0 | Architecture and UX | Designs, schemas, packaging plan and sample workflows |
-| 1 | Office + DataClean + Invoice | Useful standalone one-click desktop tools |
-| 2 | GST + HR + SAP | India and enterprise workflow modules with validation |
-| 3 | ERP foundation | Shared customers, ledgers, inventory and reporting |
-| 4 | Atulya One dashboard | Install modules and run connected workflows |
-| 5 | Host + mobile companion | Self-hosting and mobile document utilities |
+| 0 | Product design | Workflow format, UX mockups and security model |
+| 1 | Local actions | Files, folders, CSV/Excel transformations and run logs |
+| 2 | Recipe builder | Visual workflow editor, reusable templates and scheduler |
+| 3 | Connectors | User-approved email drafts and HTTP/API steps |
+| 4 | Distribution | One-click installers and signed release builds |
 
-## 🛡️ Safety and Compliance
+## 🛡️ Safety
 
-Atulya will prepare, validate and organize business data. It will not bypass CAPTCHAs, OTPs, MFA, portal access restrictions, employer authorization or SAP security settings. Government and regulated submissions must use permitted file formats or authorized integrations with user approval.
+Atulya Automation Hub will not bypass authentication, OTPs, CAPTCHAs, access restrictions or application security controls. Sending, deletion and remote actions must remain visible and user-approved.
 
 ## 🤝 Contributing
 
-We welcome product flows, UX mockups, sample anonymous spreadsheets, transaction recipes, installer research and code contributions. Open an issue describing the task you want Atulya to automate.
+Open an issue describing a repetitive task you want automated, including input files, expected result and the operating system you use.
+
+## 🔗 Independent Atulya Projects
+
+Each Atulya repository is a separate product and does not require this application: [ERP](https://github.com/atulyaai/Atulya-Accounting-ERP) · [GST](https://github.com/atulyaai/Atulya-GST-Suite) · [SAP](https://github.com/atulyaai/Atulya-SAP-Automations) · [Office](https://github.com/atulyaai/Atulya-Office) · [HR](https://github.com/atulyaai/Atulya-HR-Suite) · [DataClean](https://github.com/atulyaai/Atulya-Data-Scruber) · [Invoice](https://github.com/atulyaai/Atulya-Invoice) · [Convert](https://github.com/atulyaai/Atulya-All-File-Converter) · [Host](https://github.com/atulyaai/Atulya-Launch)
 
 ## 📜 License
 
-MIT is planned for the open-source core unless a module requires a different compatible notice.
+MIT is planned for the open-source core.
