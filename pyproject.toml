@@ -43,7 +43,8 @@ atulya = "atulya_automation_hub.cli:main"
 atulya-hub = "atulya_automation_hub.cli:main"
 
 [tool.setuptools.packages.find]
-where = ["src"]
+include = ["*"]
 
 [tool.setuptools.dynamic]
 version = {attr = "atulya_automation_hub.__version__"}
+
