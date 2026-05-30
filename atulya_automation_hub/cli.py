@@ -1,5 +1,4 @@
 import sys
-import os
 from pathlib import Path
 
 import click
@@ -47,9 +46,11 @@ def workflow():
 def run(ctx, file):
     engine = ctx.obj["engine"]
     workflow_data = engine.load_workflow(file)
-    click.echo(f"Running workflow: [bold]{workflow_data.get('name', 'Unnamed')}[/]")
+    from rich.console import Console
+    console = Console()
+    console.print(f"Running workflow: [bold]{workflow_data.get('name', 'Unnamed')}[/]")
     result = engine.run_workflow(workflow_data, file)
-    click.echo(f"\nStatus: {'[green]Completed[/]' if result.status == 'completed' else '[red]Failed[/]'}")
+    console.print(f"\nStatus: {'[green]Completed[/]' if result.status == 'completed' else '[red]Failed[/]'}")
     click.echo(f"Duration: {result.end_time - result.start_time:.1f}s" if result.end_time and result.start_time else "")
     sys.exit(0 if result.status == "completed" else 1)
 
@@ -250,6 +251,7 @@ def check():
 
 @update.command(name="all")
 def update_all_cmd():
+    from rich.console import Console
     checker = UpdateChecker()
     console = Console()
     console.print("[bold]Updating all Atulya tools...[/]")

@@ -1,8 +1,4 @@
 click
 rich
-python-dotenv
 pyyaml
-jinja2
 requests
-schedule
-pydantic

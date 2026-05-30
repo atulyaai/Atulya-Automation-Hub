@@ -2,7 +2,7 @@ import importlib.metadata
 import importlib.util
 import subprocess
 import re
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from typing import List, Optional, Dict
 
@@ -15,7 +15,7 @@ ATULYA_TOOLS = {
     "atulya-gst": {"name": "GST Filing", "commands": ["gstr1", "gstr3b", "itc", "eway"]},
     "atulya-sap": {"name": "SAP Connector", "commands": ["extract", "upload", "sync", "report"]},
     "atulya-hr": {"name": "HR Management", "commands": ["payroll", "attendance", "leaves", "reports"]},
-    "atulya-data-scrubber": {"name": "Data Scruber", "commands": ["clean", "dedup", "validate", "transform"]},
+    "atulya-data-scrubber": {"name": "Data Scrubber", "commands": ["clean", "dedup", "validate", "transform"]},
     "atulya-file-converter": {"name": "File Converter", "commands": ["csv", "json", "xml", "pdf", "image"]},
     "atulya-launch": {"name": "App Launcher", "commands": ["open", "run", "schedule", "shortcut"]},
 }
@@ -88,6 +88,7 @@ def parse_cron(expression: str) -> Dict[str, List[int]]:
     if len(fields) != 5:
         raise ValueError("Cron expression must have 5 fields")
     names = ["minute", "hour", "day_of_month", "month", "day_of_week"]
+    upper_bounds = {"minute": 59, "hour": 23, "day_of_month": 31, "month": 12, "day_of_week": 6}
     result = {}
     for name, field in zip(names, fields):
         if field == "*":
@@ -101,7 +102,7 @@ def parse_cron(expression: str) -> Dict[str, List[int]]:
                         base_val = 0
                     else:
                         base_val = int(base)
-                    parts.extend(range(base_val, 60, int(step)))
+                    parts.extend(range(base_val, upper_bounds[name] + 1, int(step)))
                 elif "-" in part:
                     start, end = part.split("-")
                     parts.extend(range(int(start), int(end) + 1))

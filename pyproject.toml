@@ -26,12 +26,8 @@ classifiers = [
 dependencies = [
     "click",
     "rich",
-    "python-dotenv",
     "pyyaml",
-    "jinja2",
     "requests",
-    "schedule",
-    "pydantic>=1.10.0",
 ]
 
 [project.urls]
@@ -43,7 +39,7 @@ atulya = "atulya_automation_hub.cli:main"
 atulya-hub = "atulya_automation_hub.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["*"]
+include = ["atulya_automation_hub*"]
 
 [tool.setuptools.dynamic]
 version = {attr = "atulya_automation_hub.__version__"}

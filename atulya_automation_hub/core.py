@@ -5,9 +5,9 @@ import json
 import time
 import threading
 import traceback
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
-from typing import Optional, Dict, List, Any, Callable
+from typing import Optional, Dict, List
 
 import yaml
 import requests
